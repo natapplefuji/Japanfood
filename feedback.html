@@ -7,17 +7,97 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Feedback</title>
     <style>
-    .page {
-        min-height: 100%;
-    }
-    .pageContent {
-        width: 100%;
-        min-height: 100%;
-    }
-    textarea {    
-        border:2px solid #456879;
-        border-radius:10px;
-    }
+        .page {
+            min-height: 100%;
+        }
+
+        .pageContent {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        textarea.radius {
+            border: 2px solid #964503;
+            border-radius: 15px;
+            padding: 10px;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        input.radius {
+            border: 2px solid #964503;
+            border-radius: 15px;
+            padding: 2px;
+            margin-left: 20px;
+            font-size: 18px;
+            width: 260px;
+        }
+
+        .feedarea {
+            height: 420px;
+            width: 770px;
+            margin: 50px auto;
+            border-radius: 7px 7px 7px 7px;
+            box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        .feed-img {
+            float: left;
+            height: 420px;
+            width: 350px;
+        }
+
+        .feed-img img {
+            border-radius: 7px 0 0 7px;
+        }
+
+        .feed-info {
+            float: left;
+            height: 420px;
+            width: 420px;
+            border-radius: 0 7px 10px 7px;
+            background-color: #fdf1ec;
+        }
+
+        .feed-text {
+            height: 300px;
+            width: 420px;
+        }
+
+        .feed-text h1 {
+            margin: 0 0 0 20px;
+            padding-top: 25px;
+            font-size: 50px;
+            color: #474747;
+        }
+
+
+        .feed-text h2 {
+            margin: 0 0 15px 20px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #474747;
+            letter-spacing: 0.1em;
+        }
+
+
+        .feedsend {
+            display: inline-block;
+            height: 50px;
+            width: 176px;
+            margin: 20px 40px 0 60px;
+            box-sizing: border-box;
+            border: transparent;
+            border-radius: 60px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #9cebd5;
+        }
+
+        input.feedsend:hover {
+            background-color: #79b0a1;
+        }
     </style>
 </head>
 
@@ -33,45 +113,45 @@
     <div class="page">
 
         <div class="pageNavigationBar">
-                <div class="navbar">
-                        <a href="#home">Home</a>
-                        <div class="dropdown">
-                            <button class="dropbtn">Product &#9660;</button>
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button class="dropbtn">Recipe &#9660;</button>
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
-                        <a href="#home">Feedback</a>
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Product &#9660;</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
                     </div>
-
-        <!--</div>
-        <div class="pageLeftPanel">
-            <div class="vertical-menu">
-                <a href="#" class="active">Ramen</a>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                <a href="#">Link 4</a>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Recipe &#9660;</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <a href="#home">Feedback</a>
             </div>
 
-        </div>-->
-        <div class="pageContent">
-            <p>กรุณากรอกความคิดเห็นเพื่อติชม</p>
-            <textarea rows="10" cols="75" name="comment_feedback" form="feedback" placeholder="กรอกความคิดเห็นที่นี่" required></textarea>
-            <form action="#" id="feedback">
-                <label>Email: <input type="email" name="email" required></label>
-                <input type="submit">
-            </form>
+            <div class="pageContent">
+
+                <div class="feedarea">
+                    <div class="feed-img">
+                        <img src="feedback.jpg" height="420" width="350">
+                    </div>
+                    <div class="feed-info">
+                        <div class="feed-text">
+                            <h1>Feedback</h1>
+                            <h2>โปรดแสดงความคิดเห็นของท่าน</h2>
+                            <textarea class="radius" rows="4" cols="40" name="comment_feedback" form="feedback" placeholder="กรอกความคิดเห็นที่นี่" required></textarea>
+                            <form action="#" id="feedback">
+                                <label>Email: <input class = "radius" type="email" name="email" required></label><br>
+                                <input class="feedsend" type="submit" value="SEND">
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

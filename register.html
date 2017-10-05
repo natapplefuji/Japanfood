@@ -7,34 +7,106 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Register</title>
     <style>
-    .page {
-        min-height: 100%;
-    }
-    .pageContent {
-        width: 100%;
-        min-height: 100%;
-        float : initial;
-        padding-left: 40%;
-        text-align: left;
-    }
-    textarea {    
-        border:2px solid #E74C3C;
-        border-radius:10px;
-        box-shadow: 1px 1px 2px grey;
-    }
-    input {
-        width: 220px;
-        border:2px solid #E74C3C;
-        border-radius:10px;
-        box-shadow: 1px 1px 2px grey;
-    }
-    p.registerhead{
-        font-size: 30px;
-        font-weight: bold;
-    }
-    input.submitbtn {
-        font-weight: bold;
-    }
+        .page {
+            min-height: 100%;
+        }
+
+        .pageContent {
+            width: 100%;
+            min-height: 100%;
+            text-align: left;
+        }
+
+        .registerhead {
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+            color : #E74C3C;
+        }
+        input::placeholder,
+        textarea::placeholder {
+            color: #FF5E5E;
+            font-size: 0.875em;
+        }
+
+        input:focus::placeholder,
+        textarea:focus::placeholder {
+            color: #B8B8B8;
+        }
+
+        input:hover::placeholder,
+        textarea:hover::placeholder {
+            color: #FFa7a7;
+            font-size: 0.875em;
+        }
+
+        input:hover:focus::placeholder,
+        textarea:hover:focus::placeholder {
+            color: #FF6D6D;
+        }
+
+        input:hover::placeholder,
+        textarea:hover::placeholder {
+            color: #FFa7a7;
+            font-size: 0.875em;
+        }
+        .form {
+            position: relative;
+            width: 500px;
+            margin: 25px auto 25px auto;
+        }
+
+        input {
+            font-size: 0.875em;
+            width: 470px;
+            height: 50px;
+            padding: 0px 15px 0px 15px;
+            background: #FFE4E4;
+            outline: none;
+            color: #E74C3C;
+            border: solid 1px #E74C3C;
+            border-bottom: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:hover {
+            background: #E74C3C;
+            color: #FFa7a7;
+        }
+
+        textarea {
+            width: 470px;
+            max-width: 470px;
+            height: 110px;
+            max-height: 110px;
+            padding: 15px;
+            background: #FFE4E4;
+            outline: none;
+            color: #E74C3C;
+            font-size: 0.875em;
+            border: solid 1px #E74C3C;
+            transition: all 0.3s ease-in-out;
+        }
+
+        textarea:hover {
+            background: #E74C3C;
+            color: #FFa7a7;
+        }
+
+        .submitbtn {
+            width: 502px;
+            padding: 0;
+            margin: -5px 0px 0px 0px;
+            font-size: 0.875em;
+            color: #E74C3C;
+            cursor: pointer;
+            border: solid 1px #E74C3C;
+            border-top: none;
+        }
+
+        .submitbtn:hover {
+            color: #FFa7a7;
+        }
     </style>
 </head>
 
@@ -50,28 +122,28 @@
     <div class="page">
 
         <div class="pageNavigationBar">
-                <div class="navbar">
-                        <a href="#home">Home</a>
-                        <div class="dropdown">
-                            <button class="dropbtn">Product &#9660;</button>
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button class="dropbtn">Recipe &#9660;</button>
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
-                        <a href="#home">Feedback</a>
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Product &#9660;</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
                     </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Recipe &#9660;</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <a href="#home">Feedback</a>
+            </div>
 
-        <!--</div>
+            <!--</div>
         <div class="pageLeftPanel">
             <div class="vertical-menu">
                 <a href="#" class="active">Ramen</a>
@@ -82,23 +154,19 @@
             </div>
 
         </div>-->
-        <div class="pageContent">
-            <p class = "registerhead">ลงทะเบียน</p>
-            <form>
-                <label>ชื่อ-นามสกุล :</label><br>
-                <input type = "text" name = "name" placeholder="  ชื่อ-นามสกุล"><br>
-                <label>หมายเลขโทรศัพท์ :</label><br>
-                <input type = "tel" name = "tel" placeholder="  หมายเลขโทรศัพท์"><br>
-                <label>Email :</label><br>
-                <input type = "email" name = "email" placeholder="  abc@website.com"><br>
-                <label>ที่อยู่ในการจัดส่ง</label><br>
-                <textarea rows="5" cols="40" name="comment_feedback" form="feedback" placeholder="บ้านเลขที่ ถนน แขวง เขต จังหวัด รหัสไปรษณีย์" required></textarea><br>
-                <input class = "submitbtn" type = "submit" value = "สมัครสมาชิก">
-            </form>
+            <div class="pageContent">
+                    <p class="registerhead">ลงทะเบียน</p>
+                    <form class = "form">
+                        <input type="text" name="name" placeholder="ชื่อ-นามสกุล" required>
+                        <input type="tel" name="tel" placeholder="หมายเลขโทรศัพท์" required>
+                        <input type="email" name="email" placeholder="อีเมลล์" required>
+                        <textarea  name="comment_feedback" form="feedback" placeholder="ที่อยู่ในการจัดส่ง"required></textarea>
+                        <input class="submitbtn" type="submit" value="สมัครสมาชิก">
+                    </form>           
             </div>
 
         </div>
-        
+
         <div class="pageFooter">
             Custom Layout By 101Computing.net
 
