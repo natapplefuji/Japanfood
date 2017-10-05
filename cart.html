@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Cart</title>
+    <style>
+        .page {
+            min-height: 100%;
+        }
+
+        .pageContent {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        .carttable {
+            width: 75%;
+            margin: auto;
+        }
+
+        table {
+            color: #666;
+            font-size: 18px;
+            text-shadow: 1px 1px 0px #fff;
+            background: #eaebec;
+            margin: auto;
+            border: #ccc 1px solid;
+
+            border-radius: 3px;
+
+            box-shadow: 0 1px 2px #d1d1d1;
+        }
+
+        table th {
+            padding: 21px 25px 22px 25px;
+            border-top: 1px solid #fafafa;
+            border-bottom: 1px solid #e0e0e0;
+
+            background: #ededed;
+        }
+
+        table th:first-child {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        table tr {
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        table td:first-child {
+            text-align: left;
+            padding-left: 20px;
+            border-left: 0;
+        }
+
+        table td {
+            padding: 18px;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
+            background: #fafafa;
+        }
+
+        table tr:hover td {
+            background: #f2f2f2;
+        }
+
+        table img {
+            width: 180px;
+            height: 135px;
+            border-radius: 4px;
+        }
+        table input {
+            font-size: inherit;
+            text-align: center;
+        }
+        table caption {
+            padding-bottom: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        th.totalprice {
+            color : #AC0000;
+        }
+        button.continue {
+            width: 300px;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding: 3px;
+            border : none;
+            font-size: 30px;
+            color :white;
+            background-color: #FF4F4F
+        }
+        button.continue:hover {
+            background-color: #FF1C1C;
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="banner">
+        <tr>
+            <img src="sushi.png" alt="banner" style="display:block;width:100%;">
+        </tr>
+    </table>
+    <!-- <div>
+           
+    </div> -->
+    <div class="page">
+
+        <div class="pageNavigationBar">
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Product &#9660;</button>
+                    <div class="dropdown-content">
+                            <a href="ramen.html">Ramen</a>
+                            <a href="sushi.html">Sushi&sashimi</a>
+                            <a href="bento.html">Bento&Donburi</a>
+                            <a href="appetizer.html">Appetizer</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Recipe &#9660;</button>
+                    <div class="dropdown-content">
+                            <a href="recipe1.html">ข้าวหน้าแกงกะหรี่หมูทอด</a>
+                            <a href="recipe2.html">ปลาแซลมอนย่างซอสเทอริยากิ</a>
+                            <a href="recipe3.html">ไข่หวานญี่ปุ่น</a>
+                            <a href="recipe4.html">พิซซ่าญี่ปุ่น</a>
+                            <a href="recipe5.html">เกี๊ยวซ่า</a>
+                    </div>
+                </div>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            <div class="pageContent">
+                <div class="carttable">
+                    <table>
+                        <caption>รายการสินค้า</caption>
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                    สินค้า
+                                </th>
+                                <th>
+                                    จำนวน
+                                </th>
+                                <th>
+                                    ราคา
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./ramen/hiyashi-ramen.jpg">
+                                </td>
+                                <td>
+                                    ราเมนฮิยาชิ
+                                </td>
+                                <td>
+                                    <input type = "number" value="1" style = "width : 30px;">
+                                </td>
+                                <td>
+                                    139.-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./ramen/bunshu-ramen.jpg">
+                                </td>
+                                <td>
+                                    ราเมนบังชู
+                                </td>
+                                <td>
+                                        <input type = "number" value="1" style = "width : 30px;">
+                                </td>
+                                <td>
+                                    139.-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./appetizer/gyoza.jpg">
+                                </td>
+                                <td>
+                                    เกี๊ยวซ่า
+                                </td>
+                                <td>
+                                        <input type = "number" value="2" style = "width : 30px;">
+                                </td>
+                                <td>
+                                    154.-
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2">
+                                    รวม
+                                </th>
+                                <th>
+                                    4
+                                </th>
+                                <th class="totalprice">
+                                    432 บาท
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button class = "continue" type = "submit">ดำเนินการต่อ</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pageFooter">
+            Custom Layout By 101Computing.net
+
+        </div>
+    </div>
+</body>
+
+</html>
