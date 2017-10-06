@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Register</title>
+    <title>Checkout</title>
     <style>
         .page {
             min-height: 100%;
@@ -22,6 +22,14 @@
             font-weight: bold;
             text-align: center;
             color : #E74C3C;
+            text-shadow: 1px 1px 2px #757575;
+        }
+        .subtotal {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            color : #E74C3C;
+            text-shadow: 0.5px 0.5px 1px #757575;
         }
         input::placeholder,
         textarea::placeholder {
@@ -147,13 +155,14 @@
             </div>
 
             <div class="pageContent">
-                    <p class="registerhead">ลงทะเบียน</p>
-                    <form class = "form">
+                    <p class="registerhead">รายละเอียดการจัดส่ง</p>
+                    <p class="subtotal">ยอดรวม 432 บาท</p>
+                    <form id = "checkoutform"class = "form">
                         <input type="text" name="name" placeholder="ชื่อ-นามสกุล" required>
                         <input type="tel" name="tel" placeholder="หมายเลขโทรศัพท์" required>
                         <input type="email" name="email" placeholder="อีเมลล์" required>
-                        <textarea  name="comment_feedback" form="feedback" placeholder="ที่อยู่ในการจัดส่ง"required></textarea>
-                        <input class="submitbtn" type="submit" value="สมัครสมาชิก">
+                        <textarea  name="address" form="checkoutform" placeholder="ที่อยู่ในการจัดส่ง"required></textarea>
+                        <input class="submitbtn" type="submit" value="สั่งอาหาร">
                     </form>           
             </div>
 
