@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Checkout</title>
+    <style>
+        .page {
+            min-height: 100%;
+        }
+
+        .pageContent {
+            width: 100%;
+            min-height: 100%;
+            text-align: left;
+        }
+
+        .registerhead {
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+            color: #E74C3C;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #FF6F00;
+            font-size: 0.875em;
+        }
+
+        input:focus::placeholder,
+        textarea:focus::placeholder {
+            color: #B8B8B8;
+        }
+
+        input:hover::placeholder,
+        textarea:hover::placeholder {
+            color: #FFF3E0;
+            font-size: 0.875em;
+        }
+
+        input:hover:focus::placeholder,
+        textarea:hover:focus::placeholder {
+            color: #FFB74D;
+        }
+
+        .form {
+            position: relative;
+            width: 500px;
+            margin: 25px auto 25px auto; 
+        }
+
+        input {
+            font-size: 0.875em;
+            width: 470px;
+            height: 50px;
+            padding: 0px 15px 0px 15px;
+            margin-top: 10px;
+            background: #FFF3E0;
+            outline: none;
+            color: #EF6C00;
+            border: solid 2px #EF6C00;
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:hover {
+            background: #EF6C00;
+            color: white;
+        }
+
+        textarea {
+            width: 470px;
+            max-width: 470px;
+            height: 110px;
+            max-height: 110px;
+            padding: 15px;
+            margin-top: 10px;
+            background: #FFF3E0;
+            color: #EF6C00;
+            font-size: 0.875em;
+            border: solid 2px #EF6C00;
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        textarea:hover {
+            background: #EF6C00;
+            color: white;
+        }
+
+        .button-green {
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .button-green:hover {
+            background-color: #27ae60;
+        }
+
+        .button-red {
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .button-red:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="banner">
+        <tr>
+            <img src="sushi.png" alt="banner" style="display:block;width:100%;">
+        </tr>
+    </table>
+    <!-- <div>
+           
+    </div> -->
+    <div class="page">
+
+        <div class="pageNavigationBar">
+            <div class="navbar">
+                <a href="home.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Product &#9660;</button>
+                    <div class="dropdown-content">
+                        <a href="ramen.html">Ramen</a>
+                        <a href="sushi.html">Sushi&sashimi</a>
+                        <a href="bento.html">Bento&Donburi</a>
+                        <a href="appetizer.html">Appetizer</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Recipe &#9660;</button>
+                    <div class="dropdown-content">
+                        <a href="recipe1.html">ข้าวหน้าแกงกะหรี่หมูทอด</a>
+                        <a href="recipe2.html">ปลาแซลมอนย่างซอสเทอริยากิ</a>
+                        <a href="recipe3.html">ไข่หวานญี่ปุ่น</a>
+                        <a href="recipe4.html">พิซซ่าญี่ปุ่น</a>
+                        <a href="recipe5.html">เกี๊ยวซ่า</a>
+                    </div>
+                </div>
+                <a href="feedback.html">Feedback</a>
+                <a href="cart.html" style="padding-bottom:15px;float:right"><img src="cart.png" alt="Add to cart"> Cart</a>
+            </div>
+
+            <div class="pageContent">
+                <p class="registerhead">ข้อมูลการจัดส่ง</p>
+                <form class="form">
+                    <input type="text" name="name" placeholder="ชื่อ-นามสกุล" required>
+                    <input type="tel" name="tel" placeholder="หมายเลขโทรศัพท์" required>
+                    <input type="email" name="email" placeholder="อีเมลล์" required>
+                    <textarea name="comment_feedback" form="feedback" placeholder="ที่อยู่ในการจัดส่ง" required></textarea>
+                    <br><br>
+                    <div style="text-align:center;">
+                        <button class="button button-green" type="submit"><a href="้home.html"></a>ยืนยันการทำรายการ</a></button>
+                        <button class="button button-red" type="button"><a href="้home.html"></a>ยกเลิกการทำรายการ</a></button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="pageFooter">
+                <h1 style="text-align:left;" id="contact"><span class="mark mark3">Contact us</span></h1>
+                <p class="contact" style="color:white;">Tel : 086-383-5482 ,  Email : natto1908@mail.com</p>
+
+        </div>
+    </div>
+</body>
+
+</html>

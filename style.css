@@ -36,6 +36,8 @@ h4{
     color: white;
 }
 
+
+
 .button-blue:hover {
     
     background-color: white; 
@@ -60,7 +62,6 @@ h4{
 	clear: none;
     width: 100%;
     font-size: 18pt;
-    
 }
 /*navbar*/
 .navbar {
@@ -68,7 +69,6 @@ h4{
     margin: 0;
     padding: 0;
     font-size: 24px;
-    
     background-color: #E74C3C;
 }
 
@@ -207,6 +207,24 @@ h4{
     padding: 12px;
     background-color: #f39c12;
     color: white;
+}
+/* head mark */
+.mark {
+    border-left: 10px solid #e74c3c;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.mark2{
+    border-left: 10px solid #9b59b6;
+}
+.mark3{
+    border-left: 10px solid #f1c40f;
+}
+.contact{
+    text-indent: 40px;
+    text-align: left;
 }
 
 @font-face {
